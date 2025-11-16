@@ -1,0 +1,312 @@
+:root {
+    --white: rgb(235, 240, 237);
+    --dark--1: rgb(36, 37, 39);
+    --dark--2: rgb(21, 21, 21);
+    --green: rgb(58, 111, 108);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--dark--1);
+}
+.nav {
+    color: white;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "title nav-1 nav-2 nav-3";
+    background: var(--dark--1);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.nav__title {
+    padding-left: 70px;
+    grid-area: title;
+    color: white;
+}
+.nav__menu {
+    text-align: center;
+    color: white;
+}
+.menu-1 {
+    grid-area: nav-1;
+}
+.menu-2 {
+    grid-area: nav-2;
+}
+.menu-3 {
+    grid-area: nav-3;
+}
+.white {
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--white);    
+}
+.title {
+    text-align: center;
+    font-size: 180px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: url(img/img1_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: auto;
+    padding-top: 100px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 10px 50px;
+    grid-template-areas:
+        "pic1 text1"
+        "text2 pic2"
+        "pic3 text3";
+}
+
+.pic-1     { grid-area: pic1; }
+.text-1    { grid-area: text1; }
+
+.text-2    { grid-area: text2; }
+.pic-2     { grid-area: pic2; }
+
+.pic-3     { grid-area: pic3; }
+.text-3    { grid-area: text3; }
+
+.grid-item {
+    padding: 20px;
+    color: var(--white);
+}
+.pics__size {
+    width: 100%;
+    height: auto;
+}
+.text__title {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+.text__size {
+    color: var(--white);
+}
+.text-1 {
+    text-align: justify;
+}
+.text-2 {
+    text-align: justify;
+}
+.text-3 {
+    text-align: justify;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    background: var(--dark--1);
+    padding-bottom: 0;
+}   
+.card {
+    background-color: var(--white);
+    width: 400px;
+    height: 600px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 3px solid var(--dark--2);
+    gap: 12px;
+}   
+.card:hover {
+    background-color: var(--green);
+    color: var(--white);
+    cursor: pointer;
+    transform: scale(1.03) translateY(-10px);
+    transition: all .2s ease-in-out;
+}
+.card_image {
+    background: var(--green);
+    height: 300px;
+    margin-bottom: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card h3 {
+    padding: 0 20px;
+    text-align: center;
+    color: var(--dark--2);
+    font-size: 20px;
+    font-weight: bold;
+}
+.card p {
+    padding: 13px 25px;
+}    
+.card a {
+    background-color: var(--dark--2);
+    color: var(--white);
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 15px;
+    width:120px;
+}   
+.card a:hover {
+    background-color: white;
+    color: var(--dark--2);
+    border: 1px solid var(--dark--1);
+    border-radius: 15px;
+}
+.product_1 {
+    background-image: url(img/Helsinki.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}    
+.product_2 {
+    background-image: url(img/Rovaniemi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}    
+.product_3 {
+    background-image: url(img/Tampere.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    background-size: cover;
+}
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background: var(--dark--1);
+}    
+.registration-form {
+    background-color: var(--white);
+    border: 3px solid var(--dark--2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin: 30px auto;
+    color: var(--dark--2);
+    z-index: -1;
+}    
+.registration-form h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}    
+.registration-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+}    
+.registration-form input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+}
+.registration-form button {
+    width: 30%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}    
+.registration-form button:hover {
+    background-color: var(--dark--2);
+    color: white;
+}
+.contact {
+    background-color: var(--green);
+    color: white;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "name link";
+    padding-top: 20px;
+}
+.name {
+    padding-left: 70px;
+    grid-area: name;
+}
+.link {
+    text-align: right;
+    padding-right: 70px;
+    grid-area: link;
+}
+.btn {
+    color: white;
+}
+.btn:hover {
+    color: var(--dark--1);
+}
+.animation {
+    margin-bottom: 110px;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.animation__bg {
+    background: url(img/nlights.jpg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 520px;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -2;
+    animation: text-care-fuge 7s linear 0.5s infinite;
+}
+@keyframes text-care-fuge {
+    from {
+        transform: translateX(-230%);
+    }
+    to {
+        transform: translateX(230%);
+    }
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text1"
+            "pic1"
+
+            "text2"
+            "pic2"
+
+            "text3"
+            "pic3";
+    }
+    .title {
+        font-size: 80px;
+        height: 250px;   
+    }
+    .nav__title {
+        padding-left: 20px;
+    }
+    .contact .name {
+        padding-left: 20px;
+    }
+    .contact .link {
+        padding-right: 20px;
+    }
+    .animation .animation__bg {
+        display: none;
+    }
+}
